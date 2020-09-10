@@ -1,0 +1,2 @@
+# manly-bot
+reddit bot 
