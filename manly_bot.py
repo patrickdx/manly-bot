@@ -12,7 +12,7 @@ def main():
     username="manly-bot",
     password="config.password")
 
-    for comment in reddit.subreddit("forsen+test").stream.comments(skip_existing=True):      #indefinitely iterate over NEW comments, skip_existing=True as parameter to start recieving new comments after stream is created. # +"test" for more subreddits
+    for comment in reddit.subreddit("forsen").stream.comments(skip_existing=True):      #indefinitely iterate over NEW comments, skip_existing=True as parameter to start recieving new comments after stream is created. # +"test" for more subreddits
         print(comment.body)
         if comment.body == "!manly":
             author = reddit.redditor(comment.author)
