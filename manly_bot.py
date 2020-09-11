@@ -11,23 +11,17 @@ def main():
     user_agent="config.user_agent",
     username="manly-bot",
     password="config.password")
-
+    
     for comment in reddit.subreddit("forsen").stream.comments(skip_existing=True):      #indefinitely iterate over NEW comments, skip_existing=True as parameter to start recieving new comments after stream is created. # +"test" for more subreddits
-        print(comment.body)
         if comment.body == "!manly":
             author = reddit.redditor(comment.author)
             # comment.reply(manly(author))
-            print(manly(author))
 
         else:                                               #!manly word
             try:                                                        #try so no index out of bounds
-                print(comment.body.split(" ")[1])                                                          #take 2nd word
 
                 if comment.body == "!manly " + comment.body.split(" ")[1] and charcheck(comment.body.split(" ")[1]):                        #check if 2nd word is char and in the form !manly word
-                    print("no chars")
                     author = reddit.redditor(comment.body.split(" ")[1])
-                    # comment.reply(manly(author))
-                    print(manly(author))
 
             except IndexError:          #pass if index out of bounds
                 pass
