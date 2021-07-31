@@ -4,3 +4,5 @@ a reddit bot
 hosted on heroku. 
 used ~1000 times.
 
+https://www.reddit.com/user/manly-bot/comments/
+
